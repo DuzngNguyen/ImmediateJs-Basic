@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    async function getUser() {
+        const response = await fetch('https://randomuser.me/api/');
+        const names = await response.json();
+        const user = names.results[0];
+        console.log(user);
+        document.getElementById("name").innerText = `${user.name.title} ${user.name.first} ${user.name.last}`;
+        document.getElementById("email").innerText = user.email;
+        document.getElementById("date").innerText = user.date;
+        document.getElementById("address").innerText = `${user.location.state} ${user.location.city} ${user.location.country} `;
+        document.getElementById("phone").innerText = user.phone;
+    }
+    getUser();
+</script>
+
+<body>
+    <p>
+        name: <span id="name"></span>
+    </p>
+    <p>
+        email: <span id="email"></span>
+    </p>
+    <p>
+        date: <span id="date"></span>
+    </p>
+    <p>
+        address: <span id="address"></span>
+    </p>
+    <p>
+        phone: <span id="phone"></span>
+    </p>
+</body>
+
+</html>

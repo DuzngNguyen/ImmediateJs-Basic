@@ -1,0 +1,42 @@
+body {
+    background-color: aquamarine;
+}
+
+.container {
+    margin: 100px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-size: 5em;
+    border: 3px solid #222222;
+    width: 700px;
+    margin: 100px auto;
+    border-radius: 5px;
+}
+
+button {
+    border: 3px solid #222222;
+    padding: 18px 10px;
+    font-size: 1.2rem;
+    width: 180px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#btn-start {
+    background-color: #15e215;
+}
+
+#btn-clear {
+    background-color: red;
+}
+
+#btn-stop {
+    background-color: brown;
+}
